@@ -147,7 +147,7 @@ Cédulas Profesionales: <span style="color:antiquewhite; text-align: center;"> <
 
               </p>
               <!-- View More Details -->
-              <a class="btn btn-default btn-main" href="#" role="button">Ver más</a>
+              <a class="btn btn-default btn-main" href="#contacto" role="button">Ver más</a>
             </div>
           </div>
           <div class="col-md-6">
@@ -604,7 +604,7 @@ Cédulas Profesionales: <span style="color:antiquewhite; text-align: center;"> <
   <div id="map" data-latitude="51.507351" data-longitude="-0.127758"></div>
 </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contacto">
         <div class="container">
             <div class="row">
                 <div class="container">
@@ -671,6 +671,48 @@ Cédulas Profesionales: <span style="color:antiquewhite; text-align: center;"> <
         </div>
     </footer>
 
+    <script>
+ /*Smooth Scrolling*/
+// Select all links with hashes
+$('a[href*="#contacto"], [href*="#about"], [href*="#services"], [href*="#portfolio"], [href*="#our-team"], [href*="#pricing"], [href*="#blog"], [href*="#contact"]')
+  // Remove links that don't actually link to anything
+  .not('[href=""]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+    </script>
+
+	<!-- Main jQuery -->
+  <script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>
 
     <script src="plugins/jquery.min.js"></script>
 
