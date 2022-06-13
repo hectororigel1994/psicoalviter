@@ -26,11 +26,20 @@
 
 
 /* Map Section */
+.contact-map #map {
+    height: 700px;
+	height: 700px;
+    width: 100%;
+    float: right;
+}
+
 .contact-map{
 	position: relative;
 	overflow: hidden;
 	#map {
 		height: 700px;
+    width: 100%;
+    float: right;
 	}
 	.contact-info{
 		position: absolute;
