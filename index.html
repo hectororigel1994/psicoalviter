@@ -114,7 +114,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Psicoterapia humanista existencial con enfoque gestal</h1>
+          <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Psicoterapia humanista existencial con enfoque gestlt</h1>
           <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Un estilo de asesoramiento filosófico, o al menos una forma de filosofo-terapia. 
         </div>
       </div>
@@ -678,6 +678,38 @@ Cédulas Profesionales: <span style="color:antiquewhite; text-align: center;"> <
             </div>
         </div>
     </footer>
+
+    <!-- Messenger plugin del chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your plugin del chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "102094995879751");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=527712994030&text=Hola%20Quisiera%20más%20información%20por%20favor." class="float wow fadeInRightBig" data-wow-duration="1.0s" data-wow-delay="0.8s" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
