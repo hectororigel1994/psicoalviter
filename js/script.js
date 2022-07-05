@@ -12,7 +12,7 @@
     prevArrow: '<button type=\'button\' class=\'prevArrow\'></button>',
     nextArrow: '<button type=\'button\' class=\'nextArrow\'></button>',
     dots: false,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 4000,
     pauseOnFocus: false,
     pauseOnHover: false
   });
@@ -22,7 +22,12 @@
   // testimonial slider
   $('.testimonial-slider').slick({
     arrows: false,
-    dots: false
+    dots: false,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 2000,
+    pauseOnFocus: false,
+    pauseOnHover: false
   });
 
 
